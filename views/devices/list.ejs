@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-between mb-3">
+  <h4>Danh sách thiết bị</h4>
+  <a href="/devices/create" class="btn btn-primary">+ Thêm</a>
+</div>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Khoa/phòng</th>
+      <th>Mã</th>
+      <th>Loại</th>
+      <th>Ngày nhập</th>
+      <!-- <th>Ngày xuất</th>
+      <th>Ngày ĐC</th>
+      <th>Khoa đến</th>
+      <th>Khoa đi</th>
+       <th>Ghi chú</th>
+      <th>Hành động</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <% devices.forEach(d => { %>
+      <tr>
+        <td><%= d.stt %></td>
+        <td><%= d.khoa_phong %></td>
+        <td><%= d.ma_thiet_bi %></td>
+        <td><%= d.loai %></td>
+        <td><%= d.ngay_nhap || '' %></td>
+        <td>
+        <a href="/devices/edit/<%= d.id %>" class="btn btn-sm btn-warning">Sửa</a>
+        <a href="/devices/delete/<%= d.id %>" class="btn btn-sm btn-danger"
+             onclick="return confirm('Xóa thiết bị?')">Xóa</a>
+        <a href="/devices/transfer/<%= d.id %>" class="btn btn-sm btn-info">Điều chuyển</a>
+        <a href="/reports/export" class="btn btn-sm btn-info">Xuất Excel</a>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

@@ -1,0 +1,31 @@
+<h4>Thêm thiết bị</h4>
+<form method="POST" action="/devices/add">
+  <div class="row">
+    <div class="col-md-6">
+      <label>STT</label>
+      <input name="stt" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label>Khoa / Phòng</label>
+      <input name="khoa_phong" class="form-control">
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col-md-6">
+      <label>Mã thiết bị</label>
+      <input name="ma_thiet_bi" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label>Loại</label>
+      <input name="loai" class="form-control">
+    </div>
+  </div>
+
+  <div class="mt-2">
+    <label>Ngày nhập</label>
+    <input type="date" name="ngay_nhap" class="form-control">
+  </div>
+
+  <button class="btn btn-success mt-3">Lưu</button>
+</form>

@@ -1,0 +1,32 @@
+<h4><%= device ? 'Sửa thiết bị' : 'Thêm thiết bị' %></h4>
+
+<form method="post" action="<%= device ? '/devices/edit/' + device.id : '/devices/create' %>">
+  <div class="mb-3">
+    <label>STT</label>
+    <input type="number" name="stt" class="form-control" value="<%= device?.stt || '' %>">
+  </div>
+  <div class="mb-3">
+    <label>Khoa / Phòng</label>
+    <input type="text" name="khoa_phong" class="form-control" value="<%= device?.khoa_phong || '' %>">
+  </div>
+  <div class="mb-3">
+    <label>Mã thiết bị</label>
+    <input type="text" name="ma_thiet_bi" class="form-control" value="<%= device?.ma_thiet_bi || '' %>">
+  </div>
+  <div class="mb-3">
+    <label>Loại</label>
+    <input type="text" name="loai" class="form-control" value="<%= device?.loai || '' %>">
+  </div>
+<div class="mb-3">
+  <label>Ngày nhập</label>
+  <input type="date" name="ngay_nhap" class="form-control"
+         value="<%= device?.ngay_nhap || '' %>">
+</div>
+  <div class="mb-3">
+    <label>Ghi chú</label>
+    <textarea name="ghi_chu" class="form-control"><%= device?.ghi_chu || '' %></textarea>
+  </div>
+
+  <button class="btn btn-success">Lưu</button>
+  <a href="/devices" class="btn btn-secondary">Quay lại</a>
+</form>

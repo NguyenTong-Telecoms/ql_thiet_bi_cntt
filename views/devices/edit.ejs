@@ -1,0 +1,15 @@
+<% layout('layout') %>
+
+<h4>Sửa thiết bị</h4>
+<form method="POST">
+  <label>Khoa / Phòng</label>
+  <input name="khoa_phong" value="<%= device.khoa_phong %>" class="form-control">
+
+  <label class="mt-2">Loại</label>
+  <input name="loai" value="<%= device.loai %>" class="form-control">
+
+  <label class="mt-2">Ghi chú</label>
+  <textarea name="ghi_chu" class="form-control"><%= device.ghi_chu %></textarea>
+
+  <button class="btn btn-primary mt-3">Cập nhật</button>
+</form>

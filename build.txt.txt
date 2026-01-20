@@ -1,0 +1,25 @@
+npx electron-builder
+//ko dua file lon len git
+1. Tạo / sửa file .gitignore
+
+Trong thư mục dự án, tạo file:
+
+.gitignore
+
+
+Nội dung:
+
+node_modules/
+dist/
+win-unpacked/
+*.exe
+*.asar
+
+2. Gỡ file lớn đã lỡ add
+
+Chạy:
+
+git rm -r --cached dist
+git rm --cached *.exe
+git rm --cached *.asar
+git commit -m "Remove build files from repo"

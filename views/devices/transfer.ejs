@@ -1,0 +1,21 @@
+<h4>Điều chuyển thiết bị</h4>
+
+<form method="post">
+  <div class="mb-3">
+    <label>Khoa hiện tại</label>
+    <input class="form-control" value="<%= device.khoa_phong %>" readonly>
+  </div>
+
+  <div class="mb-3">
+    <label>Khoa đến</label>
+    <input name="khoa_den" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label>Ngày điều chuyển</label>
+    <input type="date" name="ngay_dieu_chuyen" class="form-control" required>
+  </div>
+
+  <button class="btn btn-success">Xác nhận</button>
+  <a href="/devices" class="btn btn-secondary">Hủy</a>
+</form>
